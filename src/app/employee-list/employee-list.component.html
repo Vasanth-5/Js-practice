@@ -1,0 +1,31 @@
+<div class="topnav">
+    <h1>Employee Dashboard</h1>
+</div>
+<input type="text" class="form-control" id="searchControlInput1" placeholder="Search..." (keyup)="filterArray($event)">
+<div class="main-page">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+        <ng-container matColumnDef="id" class="data">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let employee"> {{employee.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name" class="mat-name-column">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let employee">
+                <a routerLink="/employee-list/{{employee.id}}" fetchData()>{{employee.employee_name}}</a>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="salary" class="mat-salary-column">
+            <th mat-header-cell *matHeaderCellDef> Salary </th>
+            <td mat-cell *matCellDef="let employee"> {{employee.employee_salary}} </td>
+        </ng-container>
+        <ng-container matColumnDef="age" class="mat-age-column">
+            <th mat-header-cell *matHeaderCellDef> Age </th>
+            <td mat-cell *matCellDef="let employee"> {{employee.employee_age}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

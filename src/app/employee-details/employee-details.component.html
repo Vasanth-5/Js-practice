@@ -1,0 +1,22 @@
+<div class="topnav">
+    <h1>Employee Details</h1>
+</div>
+<div class="container">
+    <mat-card class="employee-card" appearance="outlined">
+        <mat-card-header class="employee-card__header">
+            <mat-card-title class="title">Edit Details</mat-card-title>
+        </mat-card-header>
+        <br>
+        <form action="/action_page.php">
+            <label for="name">Name:</label><br>
+            <label type="label" id="name">{{currentEmployee.employee_name}}</label><br> <br>
+            <label for="salary">Salary:</label><br>
+            <input type="text" id="salary" value={{currentEmployee.employee_salary}}><br> <br>
+            <label for="age">Age:</label><br>
+            <input type="text" id="age" value={{currentEmployee.employee_age}}><br><br>
+            <!-- <button mat-fab extended color="primary" type="submit">Submit</button> -->
+            <button class="submit-button" routerLink="/employee-list">Submit</button>
+            <!-- <input type="submit" value="Submit"> -->
+        </form>
+    </mat-card>
+</div>

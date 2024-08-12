@@ -1,0 +1,36 @@
+table {
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    flex: 1;
+    height: inherit;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(77, 77, 194);
+
+    h1 {
+        font-size: 30px;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+input {
+    width: 78%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 4.5px;
+    display: flex;
+    margin: auto;
+}
+
+
+
+.mat-elevation-z8 {
+    background-color: rgb(249, 238, 225);
+}

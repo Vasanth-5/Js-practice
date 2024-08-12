@@ -1,0 +1,64 @@
+.employee-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: cornsilk;
+    width: 20%;
+
+    &__header {
+        border-bottom: 1.9px solid #ddd;
+    }
+
+    &__content {
+        p {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    padding: 16px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(77, 77, 194);
+
+    h1 {
+        font-size: 30px;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+form {
+    #name {
+        font-size: 25px;
+        color: black;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+label {
+    font-weight: bold;
+    color: rgb(77, 77, 194);
+}
+
+.submit-button {
+    padding: 6px 12px;
+    border-radius: 10px;
+    background-color: rgb(77, 77, 194);
+    color: rgb(249, 247, 247);
+    font-size: 12px;
+    cursor: pointer;
+
+}
