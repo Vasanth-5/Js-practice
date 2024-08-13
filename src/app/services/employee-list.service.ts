@@ -14,17 +14,20 @@ export class EmployeeListService {
     return this.http.get<IEmployeeData>(this.url).pipe(
       catchError((error: HttpErrorResponse) => {
         this.showError(error)
-        return throwError(() => new Error('An error occurred. Please try again.'));
+        return throwError(() => new Error('test'));
       }));
 
   }
 
   private showError(error: HttpErrorResponse) {
     const errorMessage = error.error?.message || 'An error occurred. Please try again.';
-    this.snackBar.open(errorMessage, 'Retry', {
+    const snackBarRef = this.snackBar.open(errorMessage, 'Retry', {
       duration: 5000,
       verticalPosition: 'bottom',
       horizontalPosition: 'center'
+    });
+    snackBarRef.onAction().subscribe(() => {
+      window.location.reload();
     });
 
   }
